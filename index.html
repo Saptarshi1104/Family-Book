@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTspUozEC1tAeAjG9DK82WokS0Oi1zlr43TAg&usqp=CAU" />
+        <label id="name">My Family</label>
+        <button id="next" onclick="update()">Next</button>
+        <script>
+        var images =   
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTspUozEC1tAeAjG9DK82WokS0Oi1zlr43TAg&usqp=CAU",
+    "https://i.pinimg.com/736x/c1/a9/b2/c1a9b2512b29182b99fa3052c5f37e85.jpg",
+    "https://www.seekpng.com/png/detail/373-3737886_man-clipart-dad-animated-picture-of-father.png",
+    "https://i.pinimg.com/originals/d5/6c/d2/d56cd25436d0d3f56ad2f143750f7455.png",
+    "https://www.clipartkey.com/mpngs/m/13-133994_grandmother-clipart-animated-grand-mother-cartoon-image-png.png",
+    "https://thumbs.dreamstime.com/b/cartoon-father-son-playing-together-illustration-81677349.jpg"
+    ];
+        var names = [My Family,Sujata Mandal,Shyamal Mandal,Amal Krishna Dutta,Mamata Dutta,Saptarshi Mandal];
+        var i = 0;
+        function update()
+        {
+            i++;
+            var family_members = 5;
+            if(i > family_members)
+            {
+                i = 0;
+            }
+            var updatedImage = images[i];
+            var updatedName = names[i];
+            document.getElementById("name").src = updatedImage;
+            document.getElementById("image").innerHTML = updatedName;
+        }
+        </script>
+    </body>  
+</html>
